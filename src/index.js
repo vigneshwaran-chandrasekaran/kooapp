@@ -1,6 +1,8 @@
 // import "antd/dist/antd.css";
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import store from 'store';
 import { ThemeProvider } from 'styled-components';
 import 'styles/index.less';
 import theme from 'theme.js';
@@ -10,7 +12,9 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
 	<React.StrictMode>
 		<ThemeProvider theme={theme}>
-			<App />
+			<Provider store={store}>
+				<App />
+			</Provider>
 		</ThemeProvider>
 	</React.StrictMode>,
 	document.getElementById('root')
