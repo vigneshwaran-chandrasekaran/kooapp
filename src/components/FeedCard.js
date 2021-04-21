@@ -1,5 +1,6 @@
 import republicLogo from 'assets/images/republic';
 import userFollow from 'assets/images/userFollow.svg';
+import { FeedControls } from 'components';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -12,6 +13,10 @@ const Feed = styled.div`
 
 	border: 1px solid #ccc;
 	background-color: #fff;
+
+	@media (max-width: 768px) {
+		width: 90%;
+	}
 `;
 
 const FeedInfo = styled.div`
@@ -59,6 +64,12 @@ const UserFollow = styled.img`
 	margin-left: 10px;
 `;
 
+const FeedContent = styled.p`
+	color: #484848;
+	font-size: 15px;
+	margin-top: 10px;
+`;
+
 export default function FeedCard() {
 	return (
 		<Feed>
@@ -77,6 +88,11 @@ export default function FeedCard() {
 						<UserFollow src={userFollow} alt="follow" />
 					</FeedHeaderRight>
 				</FeedHeader>
+				<FeedContent>
+					Want 11 Jaddus on the field: Deepak Chahar makes a unique
+					wish after crushing Punjab Kings
+				</FeedContent>
+				<FeedControls />
 			</FeedInfo>
 		</Feed>
 	);

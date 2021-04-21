@@ -20,6 +20,7 @@ export default function LinksGroup() {
 	const dispatch = useDispatch();
 
 	function handleLoginCLick() {
+		console.log('handleLoginCLick clicked');
 		/**
 		 * Trigger to open login form
 		 */
