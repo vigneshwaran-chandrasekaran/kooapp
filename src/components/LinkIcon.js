@@ -13,6 +13,11 @@ const Icon = styled.div`
 const IconLabel = styled.span`
 	font-size: 12px;
 	padding-top: 5px;
+	text-align: center;
+
+	@media (max-width: 768px) {
+		font-size: 10px;
+	}
 `;
 
 export default function LinkIcon({ data }) {

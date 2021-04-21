@@ -12,6 +12,11 @@ const StyledHeader = styled.header`
 	justify-content: space-between;
 	align-items: center;
 	padding: 10px 12%;
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+		padding: 10px;
+	}
 `;
 
 const LogoSearch = styled.div`
@@ -19,6 +24,10 @@ const LogoSearch = styled.div`
 	justify-content: flex-start;
 	align-items: center;
 	width: 60%;
+	@media (max-width: 768px) {
+		width: 100%;
+		margin-bottom: 15px;
+	}
 `;
 
 export default function Header() {
