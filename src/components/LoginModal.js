@@ -33,6 +33,11 @@ const Input = styled.input`
 	margin-top: 15px;
 `;
 
+const TitleInfo = styled.p`
+	font-weight: bold;
+	font-size: 16px;
+`;
+
 const Title = styled.div`
 	text-align: center;
 	font-size: 24px;
@@ -90,7 +95,11 @@ export default function LoginModal() {
 				footer={false}
 			>
 				<ModalContent>
-					<p>Register your Mobile Number</p>
+					<TitleInfo>
+						{loginType === 'mobile'
+							? 'Register your Mobile Number'
+							: 'Register your Email'}
+					</TitleInfo>
 					{loginType === 'mobile' ? (
 						<CountryPhoneInput
 							value={value}

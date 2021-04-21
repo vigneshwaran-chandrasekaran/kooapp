@@ -34,6 +34,7 @@
   "scripts": {
     "start": "cross-env PORT=3701 craco start --verbose --no-cache",
     "build": "react-scripts build",
+    "craco-build": "craco build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
